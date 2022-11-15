@@ -6,13 +6,13 @@ A simple package to decode exported recipe files (of type `.melarecipe` and `.me
 
 ```sh
 # npm
-npm install package
+npm install mela-decoder
 
 # yarn
-yarn add package
+yarn add mela-decoder
 
 # pnpm
-pnpm install package
+pnpm install mela-decoder
 ```
 
 ## Usage
