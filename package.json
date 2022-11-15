@@ -1,6 +1,6 @@
 {
     "name": "mela-decoder",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Decode recipe files exported from the iOS app Mela",
     "keywords": [
         "mela",
