@@ -1,8 +1,12 @@
 {
-    "name": "package-name",
+    "name": "mela-decoder",
     "version": "0.0.0",
-    "description": "",
-    "repository": "markmals/package-name",
+    "description": "Decode recipe files exported from the iOS app Mela",
+    "keywords": [
+        "mela",
+        "recipe"
+    ],
+    "repository": "markmals/mela-decoder-js",
     "license": "MIT",
     "sideEffects": false,
     "type": "module",
@@ -24,12 +28,16 @@
         "prepack": "unbuild",
         "release": "npm run build && np"
     },
+    "dependencies": {
+        "adm-zip": "^0.5.9"
+    },
     "devDependencies": {
+        "@types/adm-zip": "^0.5.0",
+        "np": "latest",
+        "prettier": "latest",
         "typescript": "latest",
         "unbuild": "latest",
-        "vitest": "latest",
-        "np": "latest",
-        "prettier": "latest"
+        "vitest": "latest"
     },
     "prettier": {
         "printWidth": 100,

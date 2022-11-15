@@ -1,6 +1,6 @@
-# Package Name
+# Mela Decoder
 
-Package description
+A simple package to decode exported recipe files (of type `.melarecipe` and `.melarecipes`) from the iOS recipe app [Mela](https://mela.recipes).
 
 ## Installation
 
@@ -18,7 +18,10 @@ pnpm install package
 ## Usage
 
 ```typescript
-import {} from "package"
+import Recipes, { Recipe } from "mela-decoder"
+
+let recipes = (await Recipes.readFromFile("./Recipes.melarecipes")) as Recipe[]
+await Recipes.writeToDir("../Desktop", recipes)
 ```
 
 ## License
