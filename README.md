@@ -20,7 +20,7 @@ pnpm install mela-decoder
 ```typescript
 import Recipes, { Recipe } from "mela-decoder"
 
-let recipes = (await Recipes.readFromFile("./Recipes.melarecipes")) as Recipe[]
+let recipes: Recipe[] = await Recipes.readFromFile("./Recipes.melarecipes")
 await Recipes.writeToDir("../Desktop", recipes)
 ```
 

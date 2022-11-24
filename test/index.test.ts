@@ -1,22 +1,16 @@
 import { existsSync, unlinkSync } from "node:fs"
 import { afterEach, describe, expect, test } from "vitest"
-import Recipes, { Recipe } from "../src"
+import Recipes from "../src"
 
 describe("mela recipe files", () => {
     describe("recipe decoder", () => {
         test("reads from melarecipes file", async () => {
-            let recipes = (await Recipes.readFromFile(
-                "./test/files/Recipes.melarecipes"
-            )) as Recipe[]
-
+            let recipes = await Recipes.readFromFile("./test/files/Recipes.melarecipes")
             expect(recipes.length).toEqual(10)
         })
 
         test("reads from melarecipe file", async () => {
-            let recipe = (await Recipes.readFromFile(
-                "./test/files/Banana Bread.melarecipe"
-            )) as Recipe
-
+            let recipe = await Recipes.readFromFile("./test/files/Banana Bread.melarecipe")
             expect(recipe.title).toEqual("Banana Bread")
             expect(recipe.text).toEqual(
                 "Dark brown sugar is key and a dollop of mascarpone makes for superior tenderness."

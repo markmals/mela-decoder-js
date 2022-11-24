@@ -83,6 +83,8 @@ export namespace Recipes {
      * Throws an error if the file path does not point to a '.melarecipes' or '.melarecipe' file.
      *
      */
+    export async function readFromFile(filePath: `${string}.melarecipe`): Promise<Recipe>
+    export async function readFromFile(filePath: `${string}.melarecipes`): Promise<Recipe[]>
     export async function readFromFile(filePath: string): Promise<Recipe | Recipe[]> {
         switch (extname(filePath)) {
             case ".melarecipes": {
